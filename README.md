@@ -1,1 +1,1 @@
-# geospatial-sentiment Dashboard.-traditional-model
+# geospatial-sentiment Dashboard.-svm-model
