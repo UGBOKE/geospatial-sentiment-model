@@ -6,7 +6,6 @@ import re
 from nltk import pos_tag, word_tokenize
 from nltk.corpus import wordnet
 from nltk.stem import WordNetLemmatizer
-import nltk
 import plotly.express as px
 import pycountry
 from datetime import datetime
@@ -17,12 +16,19 @@ from sklearn.metrics import accuracy_score
 import seaborn as sns
 from sklearn.metrics import confusion_matrix, precision_score, recall_score, f1_score, classification_report
 import gdown
+import os
 
-nltk.download('averaged_perceptron_tagger')
-nltk.download('punkt')
-nltk.download('wordnet')
-nltk.download('omw-1.4')
-nltk.download('vader_lexicon')
+# Set NLTK data path
+nltk_data_path = 'nltk_data'
+if not os.path.exists(nltk_data_path):
+    os.makedirs(nltk_data_path)
+nltk.data.path.append(nltk_data_path)
+
+# NLTK downloads
+nltk.download('averaged_perceptron_tagger', download_dir=nltk_data_path)
+nltk.download('punkt', download_dir=nltk_data_path)
+nltk.download('wordnet', download_dir=nltk_data_path)
+nltk.download('omw-1.4', download_dir=nltk_data_path)
 
 @st.cache_data
 def load_data():
