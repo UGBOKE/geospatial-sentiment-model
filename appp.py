@@ -17,8 +17,12 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score
 import seaborn as sns
 from sklearn.metrics import confusion_matrix, precision_score, recall_score, f1_score, classification_report
-import gdown
 import os
+# Ensure necessary packages are installed
+os.system('pip install gdown')
+
+# Now import gdown
+import gdown
 
 nltk.download('averaged_perceptron_tagger')
 nltk.download('punkt')
