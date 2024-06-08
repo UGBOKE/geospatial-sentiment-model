@@ -25,14 +25,14 @@ nltk.download('wordnet')
 nltk.download('omw-1.4')
 nltk.download('vader_lexicon')
 
-@st.cache
+@st.cache_resource
 def load_data():
     url = 'https://drive.google.com/uc?id=16EV2Pz8pkr973dowSI7bnEGy-8Xzc2Gx'
     output = 'Teepublic_review.csv'
     gdown.download(url, output, quiet=False)
     return pd.read_csv(output, encoding="latin1")
 
-@st.cache
+@st.cache_resource
 def load_model(vectorizer_url, model_url):
     vectorizer_output = 'vectorizer.joblib'
     model_output = 'svm_model.joblib'
@@ -42,7 +42,7 @@ def load_model(vectorizer_url, model_url):
     model = joblib.load(model_output)
     return vectorizer, model
 
-@st.cache
+@st.cache_resource
 def load_image(url):
     output = 'logo.png'
     gdown.download(url, output, quiet=False)
