@@ -1,5 +1,6 @@
 
 # Project Title: Geospatial Sentiment Analysis Dashboard
+https://geospatial-sentiment-model-argdbdwfn6yi8zooqjakam.streamlit.app/
 # Description:
 This project presents a comprehensive analysis tool, the "Geospatial Sentiment Analysis Dashboard," designed for monitoring and visualizing customer sentiments from reviews across various geographical locations. The dashboard leverages sentiment analysis algorithms to process textual data from customer reviews, categorizing them into positive or negative sentiments. It then visualizes this data on a global scale, enabling businesses to gain insights into customer satisfaction and opinions based on different regions and time frames.
 
